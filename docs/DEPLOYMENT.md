@@ -6,11 +6,12 @@ Run `pytest -q`. All tests must pass before deployment.
 
 ## 2. Publish the evidence snapshot
 
-Commit `evidence/demo-policy.txt` to the final GitHub repository. Obtain:
+The demo snapshot is sealed at:
 
-- the 40-character commit SHA;
-- the SHA-256 of the exact raw response bytes;
-- the raw path `/OWNER/REPOSITORY/COMMIT/evidence/demo-policy.txt`.
+- commit: `247669210e425bd68858752665948170105a0354`
+- SHA-256: `8f881213721cdafc92386c50d8e364c699df74494ddc8c3d77575e8fe4d89c82`
+- raw URL: `https://raw.githubusercontent.com/Azaria723/BugBountyScopeOracle/247669210e425bd68858752665948170105a0354/evidence/demo-policy.txt`
+- policy path: `/Azaria723/BugBountyScopeOracle/247669210e425bd68858752665948170105a0354/evidence/demo-policy.txt`
 
 Never use a branch such as `main` as the policy path. The commit must be immutable.
 
@@ -25,8 +26,8 @@ Call `register_program` with:
 1. `program_key`: `BB-DEMO`
 2. `represented_domain`: `example.com`
 3. `source_host`: `raw.githubusercontent.com`
-4. `policy_path`: the immutable raw path from step 2
-5. `policy_sha256`: the exact digest from step 2
+4. `policy_path`: `/Azaria723/BugBountyScopeOracle/247669210e425bd68858752665948170105a0354/evidence/demo-policy.txt`
+5. `policy_sha256`: `8f881213721cdafc92386c50d8e364c699df74494ddc8c3d77575e8fe4d89c82`
 
 The expected return value is program ID `0`.
 

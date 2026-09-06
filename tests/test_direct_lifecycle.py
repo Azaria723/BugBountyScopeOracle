@@ -4,7 +4,8 @@ import json
 PROGRAM = "BB-DEMO"
 DOMAIN = "example.com"
 SOURCE = "raw.githubusercontent.com"
-PATH = "/Azaria723/BugBountyScopeOracle/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/evidence/demo-policy.txt"
+POLICY_COMMIT = "247669210e425bd68858752665948170105a0354"
+PATH = "/Azaria723/BugBountyScopeOracle/" + POLICY_COMMIT + "/evidence/demo-policy.txt"
 POLICY = b"""PROGRAM_ID: BB-DEMO
 REPRESENTED_DOMAIN: example.com
 
@@ -45,7 +46,7 @@ def request(direct_vm, contract, requester, asset):
         assert contract.request_scope_check(0, asset) == 0
 
 def mock_policy(direct_vm, body=POLICY, status=200):
-    direct_vm.mock_web(r"https://raw\.githubusercontent\.com/Azaria723/BugBountyScopeOracle/a{40}/evidence/demo-policy\.txt$", {"status": status, "body": body})
+    direct_vm.mock_web(r"https://raw\.githubusercontent\.com/Azaria723/BugBountyScopeOracle/247669210e425bd68858752665948170105a0354/evidence/demo-policy\.txt$", {"status": status, "body": body})
 
 def record(contract):
     return json.loads(contract.get_check(0))
