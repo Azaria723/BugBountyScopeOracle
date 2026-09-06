@@ -56,7 +56,8 @@ The suite uses gltest Direct Mode with strict web and LLM mocks. It covers expli
 
 Deploy [`contracts/BugBountyScopeOracle.py`](contracts/BugBountyScopeOracle.py) as a new instance in GenLayer Studio. After deployment, follow [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md). Do not register the demo snapshot until its final Git commit and SHA-256 have been substituted for the placeholders.
 
+Studionet deployment: [`0xC6b6310B1f6e56B6D8e23F7785bd34bFCe7AFAB8`](https://explorer-studio.genlayer.com/address/0xC6b6310B1f6e56B6D8e23F7785bd34bFCe7AFAB8). Source parity and the completed three-case lifecycle are recorded in [`verification/studionet-verification.md`](verification/studionet-verification.md).
+
 ## Security boundary
 
 Read [`docs/THREAT_MODEL.md`](docs/THREAT_MODEL.md) before using the contract. A recorded verdict is policy interpretation evidence, not permission to attack a system and not legal advice.
-
