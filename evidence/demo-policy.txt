@@ -1,0 +1,13 @@
+PROGRAM_ID: BB-DEMO
+REPRESENTED_DOMAIN: example.com
+
+IN SCOPE
+- api.example.com
+- *.sandbox.example.com
+
+OUT OF SCOPE
+- status.example.com
+- Any hostname not explicitly listed above.
+
+Rules: exclusions override inclusions. The wildcard covers proper subdomains only.
+
